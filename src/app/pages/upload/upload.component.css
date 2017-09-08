@@ -1,0 +1,25 @@
+.dropArea {
+    margin-top: 10px;
+    border: 2px dashed gray;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.table-container {
+    margin-top: 35px;
+}
+
+table tbody {
+    display:block;
+    max-height:300px;
+    overflow-y:scroll;
+}
+
+ thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}

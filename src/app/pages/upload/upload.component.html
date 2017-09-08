@@ -1,0 +1,21 @@
+<input [hidden]="true" #myInput type="file" (change)="onFilesChange($event,'click')">
+
+<div (click)="myInput.click()" class="dropArea" dropArea (filesChangeEmiter)="onFilesChange($event,'drag')" allowed_extensions="['csv']">
+  <span>Clique ou Arraste arquivos aqui</span>
+</div>
+
+<div class="table-container">
+  <table class="responsive-table">
+    <thead>
+      <tr>
+          <th *ngFor="let row of fileHeader">{{ row }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of fileContent">
+        <td *ngFor="let cell of row">{{ cell }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
