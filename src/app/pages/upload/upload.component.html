@@ -19,3 +19,18 @@
   </table>
 </div>
 
+<div class="fixed-action-btn">
+  <a (click)="downloadSample()" class="btn-floating btn-large red tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo">
+    <i class="large material-icons">description</i>
+  </a>
+</div>
+
+<div class="fixed-action-btn vertical">
+  <a class="btn-floating btn-large red">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a (click)="downloadSample()" class="btn-floating green tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo"><i class="material-icons">description</i></a></li>
+    <li><a (click)="clearCache()" class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="100" data-tooltip="Limpar"><i class="material-icons">clear</i></a></li>
+  </ul>
+</div>

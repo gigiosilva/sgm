@@ -1,0 +1,102 @@
+.report-container {
+    width: 60%;
+    margin: 20px auto 20px auto;
+    background: white;
+    -webkit-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.75);
+    padding: 0 45px;
+}
+
+.report-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.sub-header-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.brand-logo {
+    color: black;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+}
+
+.divider {
+    background-color: #100f0f;
+    margin-top: 20px;
+}
+
+.chart-container {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+th {
+    background-color: #3366cc;
+    color: white;
+    text-align: center
+}
+
+td, th {
+    border: 2px solid lightgray;
+    text-align: center
+}
+
+.space {
+    padding: 50px 0;
+}
+
+.time {
+    text-align: right;
+    padding: 20px 0;
+}
+
+@media only screen and (max-width: 1526px) {
+    
+    .report-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    
+    .report-container {
+        width: 100%;
+    }
+
+    .header-right {
+        font-size: 7px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 17px;
+    }
+
+    .brand-logo {
+        font-size: 11px;
+    }
+
+    .brand-logo i {
+        font-size: 28px;
+    }
+}

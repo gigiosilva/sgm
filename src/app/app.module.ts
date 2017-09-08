@@ -4,19 +4,22 @@ import { MaterializeModule } from 'angular2-materialize';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule, JsonpModule }    from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
 import { AppComponent } from './app.component';
 import { UploadComponent } from './pages/upload/upload.component';
 import { ReportComponent } from './pages/report/report.component';
 import { routing } from "./app.routing";
-import { DropAreaDirective } from './direcitives/drop-area.directive';
+import { DropAreaDirective } from './directives/drop-area.directive';
+import { PrintDirective } from './directives/print.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     UploadComponent,
     ReportComponent,
-    DropAreaDirective
+    DropAreaDirective,
+    PrintDirective
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { DropAreaDirective } from './direcitives/drop-area.directive';
     routing,
     HttpModule,
     JsonpModule,
-    FormsModule
+    FormsModule,
+    Ng2GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

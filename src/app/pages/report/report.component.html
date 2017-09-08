@@ -1,3 +1,170 @@
-<p>
-  report works!
-</p>
+<div class="report-container" id="print-section">
+  <div class="report-header">
+      <a href="#!" class="brand-logo"><i class="material-icons left" style="font-size: 50px;">track_changes</i>SGM-Exemplo</a>
+    <div class="header-title">
+      <h4>Sistema Gerencial de Manufatura - AGULHAS</h4>
+      <h5>Oee por Processo</h5>
+    </div>
+    <div class="header-right">
+      <p><strong>Data:</strong> 24/10/2017 <strong> à </strong> 24/10/2017</p>
+      <p><strong>Processo</strong> OF01</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="chart-container">
+    <google-chart [data]="chartData"></google-chart>
+  </div>
+
+  <div class="table-container">
+    <h5>Processo</h5>
+    <table class="table-processo">
+      <thead>
+        <tr>
+            <th>Total Produzido</th>
+            <th>Produzido Bom</th>
+            <th>Paradas</th>
+            <th>Reprocesso</th>
+            <th>Op Horas</th>
+            <th>Prog Horas</th>
+            <th>Total Reparado</th>
+            <th>Desemp (%)</th>
+            <th>Disp (%)</th>
+            <th>Qual (%)</th>
+            <th>OEE (%)</th>
+            <th>Meta (%)</th>
+            <th>Util. (%)</th>
+            <th>Cap. Util. (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5,800.00</td>
+          <td>5,600.00</td>
+          <td>200.00</td>
+          <td>0.00</td>
+          <td>5.82</td>
+          <td>7.23</td>
+          <td>5,045.00</td>
+          <td>86</td>
+          <td>92</td>
+          <td>98</td>
+          <td>83</td>
+          <td>80</td>
+          <td>100</td>
+          <td>82</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-container">
+    <h5>Processo</h5>
+    <table>
+      <thead>
+        <tr>
+            <th>Horas Disponíveis</th>
+            <th>Horas Descontadas</th>
+            <th>Horas Trabalhadas</th>
+            <th>Horas Standard</th>
+            <th>Eficiência (%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>7.23</td>
+          <td>0.00</td>
+          <td>7.25</td>
+          <td>6.22</td>
+          <td>35.82</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sub-header-title"><h5>Lista de Paradas</h5></div>
+
+  <div class="chart-container">
+    <google-chart [data]="chartParadasData"></google-chart>
+  </div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Horas Paradas</th>
+            <th>Horas Disponíveis</th>
+            <th>(%)</th>
+            <th>Afetar Máquina</th>
+            <th>Afeta Operador</th>
+            <th>Absenteísmo</th>
+            <th>Grupo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A-01</td>
+          <td>Ajuste da baioneta (prensa)</td>
+          <td>0.27</td>
+          <td>7.23</td>
+          <td>3.69</td>
+          <td>Sim</td>
+          <td>Sim</td>
+          <td>Não</td>
+          <td>PNP</td>
+        </tr>
+        <tr>
+            <td>A-020</td>
+            <td>Ajuste do achatamento / Prensa achatamento</td>
+            <td>0.25</td>
+            <td>7.23</td>
+            <td>3.46</td>
+            <td>Sim</td>
+            <td>Sim</td>
+            <td>Não</td>
+            <td>PNP</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="sub-header-title"><h5>Anotações de Produção</h5></div>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+            <th>Data</th>
+            <th>Tipo Proc.</th>
+            <th>Produto</th>
+            <th>Comp</th>
+            <th>Turno</th>
+            <th>TM</th>
+            <th>Lote</th>
+            <th>Lote 1</th>
+            <th>Anotações</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <div class="space"></div>
+
+  <div class="divider"></div>
+
+  <div class="time"><strong>{{ timeNow }}</strong></div>
+
+</div>
+
+<div class="fixed-action-btn">
+  <a [printelement]="'print-section'" printDirective class="btn-floating btn-large red tooltipped" data-position="left" data-delay="100" data-tooltip="Imprimir">
+    <i class="large material-icons">print</i>
+  </a>
+</div>
