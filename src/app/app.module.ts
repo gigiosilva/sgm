@@ -12,6 +12,9 @@ import { ReportComponent } from './pages/report/report.component';
 import { routing } from "./app.routing";
 import { DropAreaDirective } from './directives/drop-area.directive';
 import { PrintDirective } from './directives/print.directive';
+import { LoginComponent } from './pages/login/login.component';
+import { AppService } from './app.service';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { PrintDirective } from './directives/print.directive';
     UploadComponent,
     ReportComponent,
     DropAreaDirective,
-    PrintDirective
+    PrintDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,10 @@ import { PrintDirective } from './directives/print.directive';
     FormsModule,
     Ng2GoogleChartsModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard,
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

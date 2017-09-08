@@ -6,6 +6,12 @@
     font-size: 50px;
 }
 
+.login-background {
+    background-image: -webkit-linear-gradient(top,#654a86,#534292);
+    background-image: linear-gradient(to bottom,#654a86,#534292);
+    background-color: #534292;
+}
+
 @media only screen and (max-width: 992px) {
 
     .brand-logo {
@@ -19,11 +25,11 @@
 
 @media only screen and (max-width: 366px) {
     
-        .brand-logo {
-            font-size: 18px;
-        }
-    
-        .brand-logo i {
-            font-size: 25px;
-        }
+    .brand-logo {
+        font-size: 18px;
+    }
+
+    .brand-logo i {
+        font-size: 25px;
+    }
 }

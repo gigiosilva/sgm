@@ -1,4 +1,5 @@
 import { Component, EventEmitter } from '@angular/core';
+import { AppService } from './app.service';
 declare var $: any;
 
 @Component({
@@ -8,9 +9,17 @@ declare var $: any;
 })
 export class AppComponent {
 
- ngOnInit() {
-    $(".button-collapse").sideNav();
- }
+  showMenu: boolean;
+
+  constructor(private appService: AppService) {
+
+    this.appService.userAutenticadoEmitter.subscribe(res => this.showMenu = res);
+  }
+
+  ngOnInit() {
+      
+      $(".button-collapse").sideNav();
+  }
 
 
 }
