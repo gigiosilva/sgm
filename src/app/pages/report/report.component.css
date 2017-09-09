@@ -78,6 +78,9 @@ td, th {
     
     .report-container {
         width: 100%;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
     }
 
     .header-right {
@@ -99,4 +102,5 @@ td, th {
     .brand-logo i {
         font-size: 28px;
     }
+    
 }
