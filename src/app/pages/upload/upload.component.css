@@ -1,24 +1,25 @@
 .dropArea {
     margin-top: 10px;
     border: 2px dashed gray;
-    height: 60px;
+    height: calc(100vh - 85px);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    font-size: 20px;
+}
+
+.dropArea.loaded {
+    height: 45px;
 }
 
 .upload-container {
     padding: 0 10px;
 }
 
-.table-container {
-    margin-top: 35px;
-}
-
 table tbody {
     display:block;
-    max-height:calc(100vh - 222px);;
+    max-height:calc(100vh - 172px);
     overflow-y:scroll;
 }
 

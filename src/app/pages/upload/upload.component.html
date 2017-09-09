@@ -1,7 +1,7 @@
 <input [hidden]="true" #myInput type="file" (change)="onFilesChange($event,'click')">
 
 <div class="upload-container">
-  <div (click)="myInput.click()" class="dropArea" dropArea (filesChangeEmiter)="onFilesChange($event,'drag')" allowed_extensions="['csv']">
+  <div (click)="myInput.click()" [ngClass]="{'loaded': loaded}" class="dropArea" dropArea (filesChangeEmiter)="onFilesChange($event,'drag')" allowed_extensions="['csv']">
     <span>Clique ou Arraste arquivos aqui</span>
   </div>
 

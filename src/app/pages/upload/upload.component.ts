@@ -14,6 +14,7 @@ export class UploadComponent {
   fileContent: Object[];
   fileHeader: Object[];
   data: Object[];
+  loaded: boolean = false;
 
   constructor(private http:Http) {
     this.http.get('assets/sample.json').subscribe(res => this.data = res.json());
@@ -35,9 +36,10 @@ export class UploadComponent {
   }
 
   loadCache() {
-    if(localStorage.getItem("content") !== undefined) {
+    if(localStorage.getItem("content") !== null) {
       this.fileContent = JSON.parse(localStorage.getItem("content"));
       this.fileHeader = JSON.parse(localStorage.getItem("header"));
+      this.loaded = true;
     }
   }
 
@@ -45,6 +47,7 @@ export class UploadComponent {
     localStorage.clear();
     this.fileContent = [];
     this.fileHeader = [];
+    this.loaded = false;
   }
 
   onFilesChange(event, method) {
@@ -63,6 +66,7 @@ export class UploadComponent {
         this.fileContent = allTextLines;
         localStorage.setItem("content", JSON.stringify(this.fileContent));
         localStorage.setItem("header", JSON.stringify(this.fileHeader));
+        this.loaded = true;
       };
     }
   }
