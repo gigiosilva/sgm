@@ -1,36 +1,38 @@
 <input [hidden]="true" #myInput type="file" (change)="onFilesChange($event,'click')">
 
-<div (click)="myInput.click()" class="dropArea" dropArea (filesChangeEmiter)="onFilesChange($event,'drag')" allowed_extensions="['csv']">
-  <span>Clique ou Arraste arquivos aqui</span>
-</div>
+<div class="upload-container">
+  <div (click)="myInput.click()" class="dropArea" dropArea (filesChangeEmiter)="onFilesChange($event,'drag')" allowed_extensions="['csv']">
+    <span>Clique ou Arraste arquivos aqui</span>
+  </div>
 
-<div class="table-container">
-  <table class="responsive-table">
-    <thead>
-      <tr>
-          <th *ngFor="let row of fileHeader">{{ row }}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let row of fileContent">
-        <td *ngFor="let cell of row">{{ cell }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <div class="table-container">
+    <table class="responsive-table">
+      <thead>
+        <tr>
+            <th *ngFor="let row of fileHeader">{{ row }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of fileContent">
+          <td *ngFor="let cell of row">{{ cell }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="fixed-action-btn">
-  <a (click)="downloadSample()" class="btn-floating btn-large red tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo">
-    <i class="large material-icons">description</i>
-  </a>
-</div>
+  <div class="fixed-action-btn">
+    <a (click)="downloadSample()" class="btn-floating btn-large red tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo">
+      <i class="large material-icons">description</i>
+    </a>
+  </div>
 
-<div class="fixed-action-btn vertical">
-  <a class="btn-floating btn-large red">
-    <i class="large material-icons">menu</i>
-  </a>
-  <ul>
-    <li><a (click)="downloadSample()" class="btn-floating green tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo"><i class="material-icons">description</i></a></li>
-    <li><a (click)="clearCache()" class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="100" data-tooltip="Limpar"><i class="material-icons">clear</i></a></li>
-  </ul>
+  <div class="fixed-action-btn vertical">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a (click)="downloadSample()" class="btn-floating green tooltipped" data-position="left" data-delay="100" data-tooltip="Arquivo de exemplo"><i class="material-icons">description</i></a></li>
+      <li><a (click)="clearCache()" class="btn-floating blue darken-1 tooltipped" data-position="left" data-delay="100" data-tooltip="Limpar"><i class="material-icons">clear</i></a></li>
+    </ul>
+  </div>
 </div>

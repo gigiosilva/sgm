@@ -17,8 +17,8 @@ export class AppComponent {
   }
 
   ngOnInit() {
-      
-      $(".button-collapse").sideNav();
+
+    $(".button-collapse").sideNav();
   }
 
 

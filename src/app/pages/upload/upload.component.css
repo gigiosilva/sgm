@@ -8,6 +8,10 @@
     cursor: pointer;
 }
 
+.upload-container {
+    padding: 0 10px;
+}
+
 .table-container {
     margin-top: 35px;
 }
